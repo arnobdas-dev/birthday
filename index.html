@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday, Puja! ❤️</title>
+    
+    <!-- Meta tags for SEO & Link Previews -->
+    <meta name="description" content="A magical, interactive birthday surprise made with love for Puja.">
+    <meta property="og:title" content="Happy Birthday, Puja! ❤️">
+    <meta property="og:description" content="A special birthday surprise just for you.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Elegant Heading serif, modern body sans, and beautiful handwritten script -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Background Particles (Stars / Sparkles) -->
+    <div id="particle-container" class="particles"></div>
+    <div id="floating-hearts-container" class="floating-hearts-bg"></div>
+
+    <!-- Background Music Controller -->
+    <button id="music-toggle" class="music-btn" aria-label="Toggle Music">
+        <span class="music-icon">♫</span>
+        <span class="music-tooltip">Click to play song 💝</span>
+    </button>
+
+    <!-- Hidden Easter Egg Trigger (in top corner, subtle) -->
+    <div id="secret-trigger" aria-hidden="true" title="A little secret...">🌸</div>
+
+    <!-- SCREEN 1: SECRET ENTRY (FULL-SCREEN INTRO) -->
+    <section id="screen-entry" class="active-screen">
+        <div class="intro-card glass">
+            <p class="intro-sub text-glow animate-fade-in">Someone made something for you...</p>
+            <div class="heart-pulse animate-pulse">❤️</div>
+            <h1 class="intro-title text-glow animate-fade-in-delayed">Are you ready, birthday girl?</h1>
+            <button id="btn-open-surprise" class="btn btn-glow">
+                Open Your Surprise <span class="sparkle-emoji">✨</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN SURPRISE CONTENT CONTAINER (hidden until button is clicked) -->
+    <main id="main-content" class="hidden-content">
+
+        <!-- SCREEN 2: HERO SECTION -->
+        <header id="screen-hero" class="hero-section">
+            <div class="hero-content">
+                <h2 class="hero-title">Happy Birthday, <span class="gf-nickname">স্নিগ্ধা</span> ❤️</h2>
+                <div class="hero-subtitle-container">
+                    <p class="hero-sub1 reveal-text">Today isn't just another day...</p>
+                    <p class="hero-sub2 reveal-text-delayed">...it's the day the world got a little more beautiful.</p>
+                </div>
+                <div class="scroll-indicator">
+                    <span class="scroll-text">Your little surprise</span>
+                    <span class="scroll-arrow">↓</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- SCREEN 3: THE FOUR CHAPTERS (SCROLL STORY) -->
+        <section id="screen-chapters" class="chapters-container">
+            
+            <!-- CHAPTER 01 -->
+            <article class="chapter-row chapter-1">
+                <div class="chapter-media animate-scroll-reveal">
+                    <div class="polaroid-frame p-rot-left">
+                        <img src="photo1.jpg" alt="Puja - The Girl I Adore" class="chapter-img" loading="lazy">
+                        <div class="polaroid-caption">The Girl I Adore 🌸</div>
+                    </div>
+                </div>
+                <div class="chapter-text animate-scroll-reveal">
+                    <span class="chapter-num">CHAPTER 01</span>
+                    <h3 class="chapter-title">The Girl I Adore 🌸</h3>
+                    <p class="chapter-desc">Somewhere along the way, you became one of the most beautiful parts of my life.</p>
+                    <span class="continue-hint">Continue →</span>
+                </div>
+            </article>
+
+            <!-- CHAPTER 02 -->
+            <article class="chapter-row chapter-2">
+                <div class="chapter-text animate-scroll-reveal">
+                    <span class="chapter-num">CHAPTER 02</span>
+                    <h3 class="chapter-title">That Smile ❤️</h3>
+                    <p class="chapter-desc">Your smile has this unfair ability to make everything around me feel a little better.</p>
+                    <span class="continue-hint">Keep scrolling →</span>
+                </div>
+                <div class="chapter-media animate-scroll-reveal">
+                    <div class="polaroid-frame p-rot-right">
+                        <img src="photo2.jpg" alt="Puja - That Smile" class="chapter-img" loading="lazy">
+                        <div class="polaroid-caption">That Smile ❤️</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CHAPTER 03 -->
+            <article class="chapter-row chapter-3">
+                <div class="chapter-media animate-scroll-reveal">
+                    <div class="polaroid-frame p-rot-left">
+                        <img src="photo3.jpg" alt="Puja - My Favorite Person" class="chapter-img" loading="lazy">
+                        <div class="polaroid-caption">My Favorite Person 🧸</div>
+                    </div>
+                </div>
+                <div class="chapter-text animate-scroll-reveal">
+                    <span class="chapter-num">CHAPTER 03</span>
+                    <h3 class="chapter-title">My Favorite Person 🧸</h3>
+                    <p class="chapter-desc">You're not just someone I love. You're someone I genuinely love having around.</p>
+                    <span class="continue-hint">Almost there →</span>
+                </div>
+            </article>
+
+            <!-- CHAPTER 04 -->
+            <article class="chapter-row chapter-4">
+                <div class="chapter-text animate-scroll-reveal">
+                    <span class="chapter-num">CHAPTER 04</span>
+                    <h3 class="chapter-title">Today Is All About You 🎂</h3>
+                    <p class="chapter-desc">And today, the world gets to celebrate the beautiful, wonderful, slightly crazy girl I’m lucky to know.</p>
+                    <span class="continue-hint">Scroll down for a challenge ↓</span>
+                </div>
+                <div class="chapter-media animate-scroll-reveal">
+                    <div class="polaroid-frame p-rot-right">
+                        <img src="photo4.jpg" alt="Puja - Today Is All About You" class="chapter-img" loading="lazy">
+                        <div class="polaroid-caption">Today Is All About You 🎂</div>
+                    </div>
+                </div>
+            </article>
+            
+        </section>
+
+        <!-- SCREEN 4: PLAYFUL MINI GAME -->
+        <section id="screen-game" class="game-section">
+            <div class="game-container glass">
+                <h2 class="game-title">Okay... enough romance for a second 👀</h2>
+                <p class="game-subtitle">Let's see if you can unlock the next surprise.</p>
+                
+                <div class="game-board-outer">
+                    <div class="game-header">
+                        <span class="game-name">CATCH THE HEARTS ❤️</span>
+                        <div id="game-counter" class="game-score">Score: ❤️ <span id="score-val">0</span> / 5</div>
+                    </div>
+                    
+                    <div id="game-board" class="game-board">
+                        <!-- Spawning targets area -->
+                        <div class="game-tap-prompt">Tap the floating hearts!</div>
+                    </div>
+                </div>
+
+                <!-- Game Success Box (hidden initially) -->
+                <div id="game-success" class="game-success-overlay hidden">
+                    <div class="success-content animate-pop">
+                        <h3 class="success-title">YOU DID IT! 🎉</h3>
+                        <p class="success-text">You've unlocked something special...</p>
+                        <button id="btn-reveal-letter" class="btn btn-glow btn-pink">
+                            Open It 💌
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 5: THE LOVE LETTER -->
+        <section id="screen-letter" class="letter-section">
+            <div class="section-title-wrapper animate-scroll-reveal">
+                <h2 class="letter-section-heading">💌 A little letter for you</h2>
+            </div>
+            
+            <div class="envelope-wrapper">
+                <!-- 3D Envelope -->
+                <div id="envelope" class="envelope">
+                    <div class="envelope-front"></div>
+                    <div class="envelope-top-flap"></div>
+                    <div class="envelope-back-flap"></div>
+                    <div class="envelope-pocket"></div>
+                    
+                    <!-- Love Letter Card inside -->
+                    <div id="letter-card" class="letter-card">
+                        <div class="letter-content">
+                            <div class="letter-scrollable">
+                                <div id="letter-text" class="letter-text-body">
+                                    <!-- Typewritten text goes here dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator to continue after opening the letter (appears once letter is open) -->
+            <div id="after-letter-hint" class="after-letter-hint hidden">
+                <p class="hint-text">Read the letter fully, then click below to proceed...</p>
+                <button id="btn-goto-final" class="btn btn-glow btn-purple">One Last Surprise ✨</button>
+            </div>
+        </section>
+
+        <!-- SCREEN 6: ONE LAST SURPRISE (GRAND CELEBRATION) -->
+        <section id="screen-surprise" class="surprise-section hidden">
+            <!-- Fullscreen canvas for fireworks and confetti -->
+            <canvas id="celebration-canvas"></canvas>
+            
+            <!-- Overlay content -->
+            <div class="surprise-content glass">
+                <div class="cake-container">
+                    <div class="cake animate-float">
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="icing"></div>
+                        <div class="cake-body"></div>
+                    </div>
+                </div>
+                
+                <h1 class="surprise-title text-glow">Happy Birthday, <span class="gf-name">Puja Sutra Dhar</span>! 🌸</h1>
+                
+                <div class="surprise-quotes">
+                    <p class="quote-item animate-slide-up">"If I could give you one gift today, it would be the ability to see yourself through my eyes—only then would you realize how truly magical you are."</p>
+                    <p class="quote-item animate-slide-up-2">"May your day be as sweet as your laughter, as bright as your smile, and as beautiful as your heart. I am so incredibly lucky to walk this path beside you."</p>
+                    <p class="quote-item animate-slide-up-3">"You are my favorite notification, my favorite conversation, and my favorite person. Today, tomorrow, and all the days that come after... you have my heart. ❤️"</p>
+                </div>
+                
+                <div class="surprise-final-msg">
+                    <p>Happy Birthday, my beautiful <span class="gf-nickname">স্নিগ্ধা</span>. Let's make this year unforgettable.</p>
+                </div>
+                
+                <footer class="surprise-footer">
+                    <p>Made with way too much love by <span class="my-name">Arnob Chandra Das</span></p>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Dialog modal for Easter Egg message -->
+    <div id="easter-egg-modal" class="modal hidden">
+        <div class="modal-content glass animate-pop">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <div class="easter-heart">💖</div>
+            <h3>Okay, you found the secret. 😌</h3>
+            <p>I love you more than this website can possibly explain. ❤️</p>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
